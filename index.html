@@ -275,6 +275,25 @@ footer small{opacity:.6;margin-inline-start:auto}
 .lang i{grid-column:1/-1;height:5px;border-radius:9px;background:rgba(255,255,255,.1);position:relative;overflow:hidden}
 .lang i::after{content:"";position:absolute;inset:0 auto 0 0;inset-inline-start:0;width:var(--w);background:var(--sky);border-radius:9px}
 @media (max-width:860px){.skgrid{grid-template-columns:1fr}}
+.press{background:var(--blue-deep);border-top:1px solid var(--line)}
+.press h2{font-size:clamp(30px,4.5vw,52px);font-weight:800;margin:10px 0 12px}
+.press .lead{color:var(--muted);margin:0 0 22px;max-width:60ch}
+.prbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.prf{font:inherit;font-size:13.5px;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 16px;cursor:pointer;transition:.2s}
+.prf[aria-pressed="true"],.prf:hover{background:var(--sky);border-color:var(--sky);color:var(--ink)}
+.prgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px;color:inherit;text-decoration:none;transition:transform .25s,border-color .25s}
+.pr:hover{transform:translateY(-4px);border-color:var(--sky)}
+.pr.hide{display:none}
+.pr-h{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12.5px}
+.pr-o{font-family:var(--display);font-weight:700;color:var(--sky)}
+.pr-d{color:var(--muted)}
+.pr b{font-family:var(--display);font-size:16.5px;font-weight:700;line-height:1.55;flex:1}
+.pr-f{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;border-top:1px solid var(--line);padding-top:10px}
+.pr-t{color:var(--muted);white-space:nowrap}
+.pr-l{color:var(--sky);white-space:nowrap}
+@media(max-width:900px){.prgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.prgrid{grid-template-columns:1fr}}
 </style>
 
 <nav><div class="in">
@@ -436,6 +455,13 @@ footer small{opacity:.6;margin-inline-start:auto}
   </div>
 </div></section>
 
+<section class="press" id="press"><div class="in">
+  <div class="kicker"><span class="ar">في الإعلام</span><span class="en">In the media</span></div>
+  <h2><span class="ar">التغطية الإعلامية</span><span class="en">Media coverage</span></h2>
+  <p class="lead"><span class="ar">مشاريع عملت عليها، كما نقلتها الصحف والقنوات.</span><span class="en">Projects I worked on, as reported by the press.</span></p>
+  <div class="prbar"><button type="button" class="prf" data-g="all" aria-pressed="true"><span class="ar">الكل</span><span class="en">All</span></button><button type="button" class="prf" data-g="books" aria-pressed="false"><span class="ar">معارض الكتاب</span><span class="en">Book fairs</span></button><button type="button" class="prf" data-g="cup" aria-pressed="false"><span class="ar">كأس السعودية</span><span class="en">Saudi Cup</span></button><button type="button" class="prf" data-g="culture" aria-pressed="false"><span class="ar">وزارة الثقافة</span><span class="en">Ministry of Culture</span></button></div>
+  <div class="prgrid"><a class="pr" data-g="books" href="https://www.okaz.com.sa/culture/culture/2215695" target="_blank" rel="noopener"><div class="pr-h"><span class="pr-o"><span class="ar">عكاظ</span><span class="en">Okaz</span></span><span class="pr-d"><span class="ar">30 سبتمبر 2025</span><span class="en">30 Sep 2025</span></span></div><b><span class="ar">«كتاب الرياض» ينطلق بعد غدٍ الخميس</span><span class="en">Riyadh Book Fair opens this Thursday</span></b><div class="pr-f"><span class="pr-t">#<span class="ar">معرض الرياض الدولي للكتاب</span><span class="en">Riyadh International Book Fair</span></span><span class="pr-l"><span class="ar">اقرأ الخبر ↗</span><span class="en">Read ↗</span></span></div></a><a class="pr" data-g="books" href="https://www.alwatan.com.sa/article/1170857" target="_blank" rel="noopener"><div class="pr-h"><span class="pr-o"><span class="ar">الوطن</span><span class="en">Al Watan</span></span><span class="pr-d"><span class="ar">2 أكتوبر 2025</span><span class="en">2 Oct 2025</span></span></div><b><span class="ar">25 دولة تشارك في معرض الرياض الدولي للكتاب</span><span class="en">25 countries take part in the Riyadh International Book Fair</span></b><div class="pr-f"><span class="pr-t">#<span class="ar">الرياض تقرأ</span><span class="en">Riyadh Reads</span></span><span class="pr-l"><span class="ar">اقرأ الخبر ↗</span><span class="en">Read ↗</span></span></div></a><a class="pr" data-g="books" href="https://www.alwatan.com.sa/ampArticle/1168216" target="_blank" rel="noopener"><div class="pr-h"><span class="pr-o"><span class="ar">الوطن</span><span class="en">Al Watan</span></span><span class="pr-d"><span class="ar">5 أغسطس 2025</span><span class="en">5 Aug 2025</span></span></div><b><span class="ar">حضور بريطاني لافت بمعرض كتاب المدينة</span><span class="en">A strong British presence at the Madinah Book Fair</span></b><div class="pr-f"><span class="pr-t">#<span class="ar">المدينة تقرأ</span><span class="en">Madinah Reads</span></span><span class="pr-l"><span class="ar">اقرأ الخبر ↗</span><span class="en">Read ↗</span></span></div></a><a class="pr" data-g="books" href="https://www.okaz.com.sa/culture/culture/2226169" target="_blank" rel="noopener"><div class="pr-h"><span class="pr-o"><span class="ar">عكاظ</span><span class="en">Okaz</span></span><span class="pr-d"><span class="ar">11 ديسمبر 2025</span><span class="en">11 Dec 2025</span></span></div><b><span class="ar">بمشاركة 24 دولة.. 170 فعالية ثقافية تدشن معرض جدة للكتاب</span><span class="en">24 countries and 170 cultural events open the Jeddah Book Fair</span></b><div class="pr-f"><span class="pr-t">#<span class="ar">جدة تقرأ</span><span class="en">Jeddah Reads</span></span><span class="pr-l"><span class="ar">اقرأ الخبر ↗</span><span class="en">Read ↗</span></span></div></a><a class="pr" data-g="cup" href="https://www.okaz.com.sa/news/local/2182907" target="_blank" rel="noopener"><div class="pr-h"><span class="pr-o"><span class="ar">عكاظ</span><span class="en">Okaz</span></span><span class="pr-d"><span class="ar">23 فبراير 2025</span><span class="en">23 Feb 2025</span></span></div><b><span class="ar">ولي العهد يشرّف حفل سباق الخيل على كأس السعودية ويتوّج الأبطال</span><span class="en">The Crown Prince attends the Saudi Cup and crowns the winners</span></b><div class="pr-f"><span class="pr-t">#<span class="ar">كأس السعودية 2025</span><span class="en">Saudi Cup 2025</span></span><span class="pr-l"><span class="ar">اقرأ الخبر ↗</span><span class="en">Read ↗</span></span></div></a><a class="pr" data-g="culture" href="https://www.alarabiya.net/saudi-today/2024/11/26/الثقافة-السعودية-تحتفي-بابداعات-الثقافة-العراقية-من-مهرجان-بين-ثقافتين-" target="_blank" rel="noopener"><div class="pr-h"><span class="pr-o"><span class="ar">العربية</span><span class="en">Al Arabiya</span></span><span class="pr-d"><span class="ar">26 نوفمبر 2024</span><span class="en">26 Nov 2024</span></span></div><b><span class="ar">السعودية تحتفي بثقافة العراق في مهرجان «بين ثقافتين»</span><span class="en">Saudi Arabia celebrates Iraqi culture at the Between Two Cultures festival</span></b><div class="pr-f"><span class="pr-t">#<span class="ar">بين ثقافتين</span><span class="en">Between Two Cultures</span></span><span class="pr-l"><span class="ar">اقرأ الخبر ↗</span><span class="en">Read ↗</span></span></div></a></div>
+</div></section>
 <section class="gallery" id="gallery"><div class="in">
   <div class="kicker"><span class="ar">من الميدان</span><span class="en">From the field</span></div>
   <h2><span class="ar">لحظات من المشاريع</span><span class="en">Moments from the projects</span></h2>
@@ -565,6 +591,8 @@ document.getElementById("copyBtn").onclick=async()=>{
   els.forEach(el=>{if(el.dataset.n)io.observe(el)});
 })();
 </script>
+<script>document.querySelectorAll('.prf').forEach(function(b){b.addEventListener('click',function(){var g=b.dataset.g;document.querySelectorAll('.prf').forEach(function(o){o.setAttribute('aria-pressed',o===b)});document.querySelectorAll('.pr').forEach(function(c){c.classList.toggle('hide',g!=='all'&&c.dataset.g!==g)})})});</script>
+
 
 </body>
 </html>
